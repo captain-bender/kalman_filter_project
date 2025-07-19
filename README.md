@@ -37,6 +37,8 @@ The project includes simulation environments, visualization tools, and compariso
 ```
 kalman_filter_project/
 ├── README.md                    # This file
+├── requirements.txt             # Python dependencies
+├── .gitignore                   # Git ignore patterns
 ├── kalman_filter.py            # Linear Kalman Filter implementation
 ├── ekf_filter.py               # Extended Kalman Filter implementation
 ├── simulation.py               # 2D trajectory simulation
@@ -52,16 +54,22 @@ kalman_filter_project/
 
 ## Requirements
 
-- Python 3.10+
-- NumPy
-- Matplotlib
+- Python 3.7+
+- NumPy >= 1.20.0
+- Matplotlib >= 3.3.0
+- pytest >= 6.0.0 (for running tests)
 
 ## Installation
 
 1. Clone or download this repository
 2. Install required dependencies:
 ```bash
-pip install numpy matplotlib
+pip install -r requirements.txt
+```
+
+Or install manually:
+```bash
+pip install numpy matplotlib pytest
 ```
 
 ## Usage

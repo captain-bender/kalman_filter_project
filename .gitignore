@@ -226,7 +226,7 @@ data/processed/
 # Plots and figures
 figures/
 plots/
-*.png
+# *.png
 *.jpg
 *.jpeg
 *.pdf

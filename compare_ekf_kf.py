@@ -175,7 +175,7 @@ if __name__ == "__main__":
     true_states, measurements, est_states_ekf, est_states_kf = run_ekf_and_kf_comparison()
     print("First 5 EKF position estimates:\n", est_states_ekf[:5, :2])
     print("First 5 Linear KF position estimates:\n", est_states_kf[:5, :2])
-    # plot_comparison(true_states, measurements, est_states_ekf, est_states_kf)
+    plot_comparison(true_states, measurements, est_states_ekf, est_states_kf)
 
     ekf_rmse = rmse(true_states[:, :2], est_states_ekf[:, :2])
     kf_rmse  = rmse(true_states[:, :2], est_states_kf[:, :2])
@@ -193,12 +193,12 @@ if __name__ == "__main__":
     print(f"| EKF       | {ekf_rmse:.4f} | {ekf_mae:.4f} |")
     print(f"| Linear KF | {kf_rmse:.4f} | {kf_mae:.4f} |")
 
-    # plot_filter_comparison(true_states, measurements, est_states_ekf, est_states_kf, ekf_rmse, kf_rmse)
+    plot_filter_comparison(true_states, measurements, est_states_ekf, est_states_kf, ekf_rmse, kf_rmse)
 
     # Per-step errors
     per_step_ekf_rmse, per_step_ekf_mae = per_step_errors(true_states, est_states_ekf)
     per_step_kf_rmse, per_step_kf_mae   = per_step_errors(true_states, est_states_kf)
 
-    # plot_error_over_time(per_step_ekf_rmse, per_step_kf_rmse, per_step_ekf_mae, per_step_kf_mae)
+    plot_error_over_time(per_step_ekf_rmse, per_step_kf_rmse, per_step_ekf_mae, per_step_kf_mae)
     plot_heading_comparison(true_states, est_states_ekf)
     

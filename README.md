@@ -47,7 +47,6 @@ kalman_filter_project/
 ├── compare_ekf_kf.py           # EKF vs KF comparison
 ├── kalman_test.py              # Kalman Filter tests
 ├── ekf_test.py                 # EKF tests
-├── ekf_test copy.py            # Additional EKF tests
 ├── data/                       # Data directory (for future datasets)
 └── tests/                      # Test directory (for future unit tests)
 ```
